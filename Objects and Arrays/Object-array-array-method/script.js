@@ -152,4 +152,40 @@ k = arr3.sort((x, y) => y.roll - x.roll);
 k = arr3.some((x) => x.roll == 60);
 // console.log(k); - true
 
-// 20)
+// 20)every - retrun true if all the element satisfy the condition
+k=arr5.every(x=>typeof x =="number")
+// console.log(k); - true
+
+// 21)array.from- it create the string into array
+let str="business"; 
+k = Array.from(str);
+// console.log(k); - ['b', 'u', 's', 'i', 'n', 'e', 's', 's']
+
+// 22) array.of - create the arrray of entered variable
+k = Array.of(arr,arr2,arr3);
+// console.log(k.flat()); - ['#', 0, false, undefined, '%', 'gujarat', 89, 45, 12, 1, 2, 3, 4, 5, {…}, {…}, {…}, {…}, {…}, {…}]
+
+// 23) array.isarray - check the variable is array or not
+k = Array.isArray(arr5);
+// console.log(k); - true
+
+// 24) array.at - entered index return array element
+console.log(arr4);
+k =arr4.at(2)
+// console.log(k); - 5
+
+// 25)copywithin
+k = arr4.copyWithin(3,2,3)
+console.log(k);
+
+// 26) flat() - remove the nesting of array
+let arr6 = [1, 23,[1, 2, 3, [45, 85, 62], 45, 14], 36, 85];
+k = arr6.flat(2);
+// console.log(k); -  [1, 23, 1, 2, 3, 45, 85, 62, 45, 14, 36, 85]
+
+// 27) array.flatmap - first do mapping and then do flat
+console.log(arr2);
+k = arr2.flatMap(x=>[x*2]);
+console.log(k);
+
+console.log([1, 2, 3].filter(x=>x%2));
