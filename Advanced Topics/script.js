@@ -101,8 +101,65 @@ let chnageData = () => {
 
 console.log(15);
 setTimeout(() => {
-    console.log("object");
+    // console.log("object");
 }, 2000);
 console.log(36);
 
 // event loop =>all the loop=>call stack=>web api=>callback queue => all the work do throught event loop
+
+// set time out 0
+let num = 150;
+// console.log("calling..");
+setTimeout(() => {
+    // console.log("settimeout...", num);
+}, 100)
+// console.log("runtime...", num);
+// console.log("runtime...2");
+// console.log("runtime...3");
+
+
+// promise with settimeout function
+
+let test3 = new Promise((resolve, reject) => {
+    let k = 36;
+    if (k == 15) {
+        resolve("ok...");
+    }
+    else {
+        reject("query...")
+    }
+})
+test3.then((resolve) => {
+    console.log(resolve);
+}, (error) => {
+    console.log("error");
+})
+
+const object = { name: "xyz", age: 15, value: "abc" };
+console.log(object);
+
+object.age = 32;
+console.log(object);
+
+// object = { name: "abc", age: 15, value: "abc" };
+// console.log(object);
+
+
+// const arr = [12, 78, 95];
+// console.log(arr);
+// arr[1] = 95;
+// console.log(arr);
+// arr = [30,85,96,78];
+// console.log(arr);
+
+
+// function a() {
+//     let cd = 15;
+//     function b() {
+//         let dk = 60;
+//         console.log(cd, dk);
+//     }
+//     b();
+//     console.log(cd, dk);
+// }
+// a();
