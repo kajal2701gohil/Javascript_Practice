@@ -92,6 +92,86 @@ document.querySelector(".btn5").addEventListener("click", (e) => {
 
 })
 
+// traversing 
+console.log(document.querySelector(".selection").childNodes);
+console.log(document.querySelector(".selection").firstElementChild);
+console.log(document.querySelector(".selection").lastElementChild);
+console.log(document.querySelector("#span").parentElement);
+console.log(document.querySelector("#span").nextElementSibling);
+console.log(document.querySelector("#span").nextSibling);
+console.log(document.querySelector("#span").previousElementSibling);
+console.log(document.querySelector("#span").previousSibling);
+
+let h1 = document.createElement("h1");
+let h2 = document.createElement("h2");
+console.log(h1, h2);
+document.querySelector(".selection").appendChild(h1, h2);
+
+
+document.querySelector("#span").addEventListener("click", function () {
+    this.classList.toggle("sec2");
+})
+
+
+window.addEventListener("load", () => {
+    console.log("page loaded....");
+})
+window.addEventListener("DOMContentLoaded", () => {
+    console.log("dom loaded....");
+})
+window.addEventListener("keydown", () => {
+    console.log("kewydown..");
+})
+window.addEventListener("keyup", () => {
+    console.log("kewyup..");
+})
+window.addEventListener("keypress", () => {
+    console.log("kewpress..");
+})
+window.addEventListener("wheel", function (event) {
+    if (event.deltaY < 0) {
+        console.log("pageup");
+    }
+    else if (event.deltaY > 0) {
+        console.log("pagedown");
+    }
+    // console.log("page is scrolling...",event.deltaY>0);
+    // document.body.style.backgroundColor = 'grey'
+})
+
+
+// for (let i = 0; i < 1_000_000_000; i++);
+
+// input event
+let inp = document.querySelector(".inp");
+inp.addEventListener("input", () => {
+    console.log("typing...");
+})
+inp.addEventListener("change", () => {
+    console.log("typing change...");
+})
+inp.addEventListener("focus", () => {
+    console.log("input is focus..");
+})
+inp.addEventListener("blur", () => {
+    console.log("input is bluring..");
+})
+
+btn.style.color = "green"
+
+btn.addEventListener("contextmenu", (e) => {
+    console.log("object");
+    e.preventDefault();
+})
+
+
+// form validation
+
+document.querySelector(".form").addEventListener("submit", (e) => {
+    console.log("form submitted...");
+    e.preventDefault();
+})
+
 
 
 
