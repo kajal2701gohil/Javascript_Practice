@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button type="button" class="btn">click</button>
+        <p id="para"></p>
+        <address id="add"></address>
+        <button onclick="getAddress(21.14537589987309, 72.75671708124807)">click for address</button>
+    </div>
+    <script>
+        let k = "9be1abf20adf49f99f3057c3dcb490ce";
+        let ap = "https://api.opencagedata.com/geocode/v1/json?";
+        let getAddress = async (latitude, longitude) => {
+            console.log(latitude);
+            let q = `${latitude},${longitude}`;
+            let u = `${ap}key=${k}&q=${q}&pretty=1`;
+            console.log(u);
+            let res = await fetch(u);
+            let h = await res.json();
+            console.log(h);
+            document.querySelector("#add").textContent = h.results[0].formatted;
+        }
+        document.querySelector(".btn").addEventListener("click", () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((res) => {
+                    let {
+                        latitude,
+                        longitude
+                    } = res.coords;
+                    document.querySelector("#para").textContent =
+                        `latitude is ${latitude} and longitude ${longitude}`
+                    getAddress(latitude, longitude);
+                }, (error) => {
+                    console.log(error.message);
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
