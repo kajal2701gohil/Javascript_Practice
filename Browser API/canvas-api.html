@@ -8,13 +8,26 @@
 </head>
 
 <body>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #8a6c48;"></canvas>
     <script>
         let canvas = document.getElementById("myCanvas");
         let ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(50, 10, 150, 75);
+        // ctx.fillStyle = "#FF0045";
+        // ctx.fillRect(50, 0, 200, 50);
 
+
+        ctx.moveTo(0, 150);
+        ctx.lineTo(300, 150);
+        ctx.stroke();
+
+        ctx.moveTo(150, 0);
+        ctx.lineTo(150, 300);
+        ctx.stroke();
+
+
+        // ctx.beginPath();
+        // ctx.arc(100, 100, 90, 0, 2*Math.PI);
+        // ctx.stroke();
     </script>
 </body>
 
