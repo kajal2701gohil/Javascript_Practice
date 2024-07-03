@@ -10,7 +10,7 @@ let getData = () => {
     if (editIndex >= 0) {
         obj.id = array[editIndex].id;
         array.splice(editIndex, 1, obj);
-        editIndex = 0;
+        editIndex = -1;
     }
     else {
         count += 1;
