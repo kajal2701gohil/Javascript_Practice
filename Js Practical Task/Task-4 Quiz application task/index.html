@@ -15,18 +15,20 @@
 
     <main class="border border-4 border-white shadow-lg w-50 position-absolute top-50 start-50 translate-middle p-4">
         <h1>Quiz Application</h1>
-        <p id="qty">Questions</p>
-        <div class="pb-2">
-            <input type="radio" name="options" class="opt opt1" id="" value=><span></span>
-            <input type="radio" name="options" class="opt opt2" id="" value=><span></span>
-            <input type="radio" name="options" class="opt opt3" id="" value=><span></span>
-            <input type="radio" name="options" class="opt opt4" id="" value=><span></span>
+        <p id="qty">Please wait...</p>
+        <div class="pb-2 optionList">
+
         </div>
 
         <div class="warning  text-danger pb-3"></div>
         <button class="btn btn-primary " onclick="nextQty(this)">Next</button>
+        <div class="text-end">
+            <p>Currant score: <span id="num">0</span></p>
+        </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    </script>
 </body>
 
 </html>
