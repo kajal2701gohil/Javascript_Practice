@@ -11,14 +11,21 @@ let aerrowFeedback = document.querySelector(".aerrow");
 
 
 name1.addEventListener("change", (e) => {
-    if (e.target.value.length < 3) {
+
+    if (e.target.value == "") {
+        nameFeedback.textContent = "This field is required"
+        nameFeedback.style.color = "red";
+    }
+    else if (e.target.value.length < 3) {
         nameFeedback.textContent = "Name must be at least 3 characters long."
+        nameFeedback.style.color = "red";
     }
     else {
-        let k = /[.*+?^${}(0-9)|[\]\\%]/g;
+        let k = /[.*+?^$#{}(0-9)|[\]\\%]/g;
         let d = k.test(e.target.value)
         if (d) {
             nameFeedback.textContent = "Name must not contain numbers or special characters."
+            nameFeedback.style.color = "red";
         } else {
             nameFeedback.textContent = "Looks good!";
             nameFeedback.style.color = "green";
@@ -26,28 +33,40 @@ name1.addEventListener("change", (e) => {
     }
 })
 email.addEventListener("change", (e) => {
-
-    let k = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
-    let d = k.test(e.target.value);
-    if (!d) {
-
-        emailFeedback.textContent = "Email must be in a valid email format (e.g., user@example.com)"
+    if (e.target.value == "") {
+        emailFeedback.textContent = "This field is required";
+        emailFeedback.style.color = "red";
     }
     else {
-        emailFeedback.textContent = "Looks good!";
-        emailFeedback.style.color = "green";
+        let k = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+        let d = k.test(e.target.value);
+        if (!d) {
+            emailFeedback.textContent = "Email must be in a valid email format (e.g., user@example.com)"
+            emailFeedback.style.color = "red";
+        }
+        else {
+            emailFeedback.textContent = "Looks good!";
+            emailFeedback.style.color = "green";
+        }
     }
 })
 
 password.addEventListener("change", (e) => {
-    if (e.target.value.length < 8) {
+
+    if (e.target.value == "") {
+        passwordFeedback.textContent = "This field is required"
+        passwordFeedback.style.color = "red";
+    }
+    else if (e.target.value.length < 8) {
         passwordFeedback.textContent = "Password must be at least 8 characters long."
+        passwordFeedback.style.color = "red";
     }
     else {
         let k = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*/
         let d = k.test(e.target.value);
         if (!d) {
             passwordFeedback.textContent = "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character."
+            passwordFeedback.style.color = "red";
         }
         else {
             passwordFeedback.textContent = "Looks good!";
@@ -57,18 +76,24 @@ password.addEventListener("change", (e) => {
 })
 
 confirmPassword.addEventListener("change", (e) => {
-    let k = e.target.value == password.value;
-    if (!k) {
-        confirmPasswordFeedback.textContent = "Confirm password not match with password"
+    if (e.target.value == "") {
+        confirmPasswordFeedback.textContent = "This field is required"
+        confirmPasswordFeedback.style.color = "red";
     }
     else {
-        confirmPasswordFeedback.textContent = "Looks good!";
-        confirmPasswordFeedback.style.color = "green";
+        let k = e.target.value == password.value;
+        if (!k) {
+            confirmPasswordFeedback.textContent = "Confirm password not match with password"
+            confirmPasswordFeedback.style.color = "red";
+        }
+        else {
+            confirmPasswordFeedback.textContent = "Looks good!";
+            confirmPasswordFeedback.style.color = "green";
+        }
     }
 })
 aerrow.addEventListener("change", (e) => {
     if (e.target.checked == false) {
-
         aerrowFeedback.textContent = "You must accept the terms and condition to registration";
         aerrowFeedback.style.color = "red";
     }
@@ -77,48 +102,26 @@ aerrow.addEventListener("change", (e) => {
         aerrowFeedback.style.color = "green";
     }
 })
-document.querySelector(".btn").addEventListener("click", (e) => {
-    if (name1.value == "") {
-        nameFeedback.textContent = "This field is required"
-        e.preventDefault();
-    }
-    if (email.value == "") {
-        emailFeedback.textContent = "This field is required"
-        e.preventDefault();
-    }
-    if (password.value == "") {
-        passwordFeedback.textContent = "This field is required"
-        e.preventDefault();
-    }
-    if (confirmPassword.value == "") {
-        confirmPasswordFeedback.textContent = "This field is required"
-        e.preventDefault();
-    }
-    if (aerrow.checked == false) {
-        aerrowFeedback.textContent = "You must accept the terms and condition to registration"
-        e.preventDefault();
-    }
-    else {
-        let allFeedbackArray = [];
-        let allFeedback = document.querySelectorAll(".feedback");
-        allFeedback.forEach(x => (x.textContent != "Looks good!") ? allFeedbackArray.push(x) : "");
-        if (allFeedbackArray.length == 0) {
+
+document.querySelector("form").addEventListener("change", () => {
+    let allFeedbackArray = [];
+    let allFeedback = document.querySelectorAll(".feedback");
+    allFeedback.forEach(x => (x.textContent != "Looks good!") ? allFeedbackArray.push(x) : "");
+    if (allFeedbackArray.length == 0) {
+        document.querySelector(".btn").removeAttribute("disabled");
+        document.querySelector(".btn").addEventListener("click", (e) => {
             Swal.fire({
                 title: "Thank You for Registration!",
                 text: "Congratulations your account has been successfully done.",
                 icon: "success",
-
             }).then(function () {
-                document.querySelector("form").reset();
+                document.querySelector("form").submit();
                 allFeedback.forEach(x => x.textContent = "");
             })
-            e.preventDefault();
-        }
-        else {
-            e.preventDefault();
-        }
+        })
     }
+    else {
+        document.querySelector(".btn").setAttribute("disabled", true);
+    }
+})
 
-
-
-});
