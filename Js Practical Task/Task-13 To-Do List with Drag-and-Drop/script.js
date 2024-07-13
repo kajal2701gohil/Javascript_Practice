@@ -1,62 +1,45 @@
 let task = document.querySelector("#task");
 let data = document.querySelector("#data");
-let items = document.querySelectorAll("li");
-let saveData = () => {
-    let createLi = document.createElement("li");
-    createLi.innerHTML = `<p class="mb-0">${task.value}</p>`
-    createLi.classList.add("item")
-    // createLi.textContent = task.value;
-    createLi.setAttribute("draggable", true)
-    data.append(createLi);
-    // task.value = ""
-    // items = document.querySelectorAll("li");
-    // console.log(items);
 
-    //     <li draggable="true" class="item">
-    //     <p class="mb-0">Lorem ipsum dolor sit amet.1</p>
-    // </li>
+let addTask = () => {
+
+    let li = document.createElement("li");
+    let p = document.createElement("p")
+    li.draggable = true;
+    p.textContent = task.value;
+    li.append(p)
+    data.appendChild(li);
+    task.value = ""
+    li.addEventListener("dragstart", dragStart1);
+    li.addEventListener("dragover", dragOver1);
+    li.addEventListener("dragend", dragEnd1);
 }
 
-items.forEach(x => {
-    x.addEventListener("dragstart", () => {
-        setTimeout(() => {
-            x.classList.add("dragging")
-        }, 0)
-    })
-    x.addEventListener("dragend", () => {
-        x.classList.remove("dragging")
-    })
-})
+let draggedItem;
 
-
-// let addDragging = (a) => {
-//     setTimeout(() => {
-//         a.classList.add("dragging")
-//     }, 0)
-// }
-
-// let removeDragging = (a) => {
-//     a.classList.remove("dragging");
-// }
-
-let reOrder = (e) => {
-    e.preventDefault();
-    let draggingElement = document.querySelector(".dragging")
-    // let siblings = [];
-    // items.forEach(x => {
-    //     x.classList.contains("dragging") ? "" : siblings.push(x)
-    // })
-    let siblings = [...data.querySelectorAll(".item:not(.dragging)")];
-
-
-    let nextElement = siblings.find(x => {
-        return e.clientY <= x.offsetTop + x.offsetHeight / 2;
-    })
-    data.insertBefore(draggingElement, nextElement);
+function dragStart1() {
+    draggedItem = this;
+    setTimeout(() => {
+        this.classList.add("dragging")
+    }, 0);
 
 }
-data.addEventListener("dragover", reOrder);
-data.addEventListener("dragenter", e => e.preventDefault());
+function dragOver1() {
+    if (this != draggedItem) {
+        let allTask = [...data.querySelectorAll("li")]
+        let draggedIndex = allTask.indexOf(draggedItem);
+        let currentIndex = allTask.indexOf(this);
+        if (draggedIndex > currentIndex) {
+            this.before(draggedItem)
+        }
+        else {
+            this.after(draggedItem);
+        }
+    }
+}
 
+function dragEnd1() {
+    this.classList.remove("dragging")
+    draggedItem = "";
 
-
+}
