@@ -14,23 +14,12 @@
         <h3>Word count: <span id="count">0</span> </h5>
             <h3> average word length: <span id="average">0</span> </h5>
                 <h3> common words: <span id="common">0</span> </h5>
+                    <p>Word includes special character not count as word</p>
     </div>
 </body>
 
-<script>
-    let textArea = document.querySelector("#textArea");
-
-    let getData = (e) => {
-        let k = e.value.toLowerCase();
-        k = k.split(" ").filter(x => x)
-        document.querySelector("#count").textContent = k.length;
-        let h = k.reduce((x, y) => x + y.length, 0)
-        document.querySelector("#average").textContent = Math.floor(h / k.length);
-        let d = new Set(k)
-        console.log(d.Set);
-        //    document.querySelector("#common").textContent = d;
-
-    }
+<script src="script.js">
+ 
 </script>
 
 
