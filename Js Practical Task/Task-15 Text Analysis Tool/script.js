@@ -21,7 +21,6 @@ let getData = (e) => {
         }
     });
 
-
     let commonWords = (Array.from(duplicateValues)).toString(",");
 
     document.querySelector("#common").textContent = commonWords;
