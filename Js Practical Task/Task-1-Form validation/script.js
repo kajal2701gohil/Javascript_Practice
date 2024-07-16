@@ -2,16 +2,15 @@ let name1 = document.querySelector("#floatingname");
 let email = document.querySelector("#floatingemail");
 let password = document.querySelector("#floatingPassword");
 let confirmPassword = document.querySelector("#floatingConfirmPassword");
-let aerrow = document.querySelector("#flexCheckDefault");
+let arrow = document.querySelector("#flexCheckDefault");
 let nameFeedback = document.querySelector(".name");
 let emailFeedback = document.querySelector(".email");
 let passwordFeedback = document.querySelector(".password");
 let confirmPasswordFeedback = document.querySelector(".confirmPassword");
-let aerrowFeedback = document.querySelector(".aerrow");
+let correctArrowFeedback = document.querySelector(".correctArrow");
 
 
 name1.addEventListener("change", (e) => {
-
     if (e.target.value == "") {
         nameFeedback.textContent = "This field is required"
         nameFeedback.style.color = "red";
@@ -21,9 +20,9 @@ name1.addEventListener("change", (e) => {
         nameFeedback.style.color = "red";
     }
     else {
-        let k = /[.*+?^$#{}(0-9)|[\]\\%]/g;
-        let d = k.test(e.target.value)
-        if (d) {
+        let regex = /[.!@#$%^&*()<>{}/?:;,.~(0-9)|[\]\\/%]/g;
+        let validName = regex.test(e.target.value)
+        if (validName) {
             nameFeedback.textContent = "Name must not contain numbers or special characters."
             nameFeedback.style.color = "red";
         } else {
@@ -32,15 +31,16 @@ name1.addEventListener("change", (e) => {
         }
     }
 })
+
 email.addEventListener("change", (e) => {
     if (e.target.value == "") {
         emailFeedback.textContent = "This field is required";
         emailFeedback.style.color = "red";
     }
     else {
-        let k = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
-        let d = k.test(e.target.value);
-        if (!d) {
+        let regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+        let validEmail = regex.test(e.target.value);
+        if (!validEmail) {
             emailFeedback.textContent = "Email must be in a valid email format (e.g., user@example.com)"
             emailFeedback.style.color = "red";
         }
@@ -62,9 +62,9 @@ password.addEventListener("change", (e) => {
         passwordFeedback.style.color = "red";
     }
     else {
-        let k = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*/
-        let d = k.test(e.target.value);
-        if (!d) {
+        let regex = /(?=.*\d)(?=.*[!@#$%^&*()_=+{}[\]:;<>,.?/~\\-])(?=.*[a-z])(?=.*[A-Z]).*/
+        let validPassword = regex.test(e.target.value);
+        if (!validPassword) {
             passwordFeedback.textContent = "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character."
             passwordFeedback.style.color = "red";
         }
@@ -81,8 +81,8 @@ confirmPassword.addEventListener("change", (e) => {
         confirmPasswordFeedback.style.color = "red";
     }
     else {
-        let k = e.target.value == password.value;
-        if (!k) {
+        let confirm = e.target.value == password.value;
+        if (!confirm) {
             confirmPasswordFeedback.textContent = "Confirm password not match with password"
             confirmPasswordFeedback.style.color = "red";
         }
@@ -92,14 +92,14 @@ confirmPassword.addEventListener("change", (e) => {
         }
     }
 })
-aerrow.addEventListener("change", (e) => {
+arrow.addEventListener("change", (e) => {
     if (e.target.checked == false) {
-        aerrowFeedback.textContent = "You must accept the terms and condition to registration";
-        aerrowFeedback.style.color = "red";
+        correctArrowFeedback.textContent = "You must accept the terms and condition to registration";
+        correctArrowFeedback.style.color = "red";
     }
     else {
-        aerrowFeedback.textContent = "Looks good!";
-        aerrowFeedback.style.color = "green";
+        correctArrowFeedback.textContent = "Looks good!";
+        correctArrowFeedback.style.color = "green";
     }
 })
 
