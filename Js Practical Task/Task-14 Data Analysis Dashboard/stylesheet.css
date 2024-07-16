@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+.heading {
+    background-image: url("https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 300px;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.filterDiv {
+    background-color: #d8c2b5;
+    border-radius: 10px;
+    height: 300px;
+    width: 30%;
+    padding: 15px;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.chartDiv {
+    width: 80%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px gray;
+}
+
+.details>div {
+   border: none;
+    height: 130px;
+    margin-bottom: 15px;
+    width: 80%;
+    border-radius: 15px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+#sumDiv {
+    background-color: #febf4b;
+}
+
+#averageDiv {
+    background-color: #195347;
+    color: #fff;
+}
+
+#minDiv {
+    background-color: #ae9fa5;
+    color: #fff;
+}
+
+#maxDiv {
+    background-color: #eaeee2;
+}
