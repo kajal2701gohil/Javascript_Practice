@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+    span {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div>
+        <form action="" id="form" class="form w-50 p-3 border border-2 border-secondary m-auto">
+            <fieldset>
+                <legend>Form</legend>
+
+                <label class="form-label" for="">name</label>
+                <input class="form-control" type="text" id="name">
+                <label class="form-label" for="">email</label>
+                <input class="form-control" type="email" id="email">
+                <span class="email"></span>
+                <br>
+                <label class="form-label" for="">password</label>
+                <input class="form-control" type="password" id="password">
+                <span class="pass"></span>
+                <br>
+                <label class="form-label" for="">mobile number</label>
+                <input class="form-control" type="tel" name="" value="" id="tel" min="0" max="9" minlength="10">
+                <label class="form-label" for="">age</label>
+                <input class="form-control" type="number" id="age">
+                <span class="age-validate"></span>
+                <br>
+                <label class="form-label" for="">color</label>
+                <input class="form-control" type="color">
+                <label class="form-label" for="">Birthdate</label>
+                <input class="form-control" type="date" id="date">
+                <span class="d1"></span>
+                <br>
+                <label class="form-label" for="">profile</label>
+                <input class="form-control" type="file" id="profile">
+                <input type="submit" value="Submit" class="btn btn-success mt-3">
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script>
+        document.querySelector("#form").addEventListener("submit", (e) => {
+            let name = document.querySelector("#name");
+            let email = document.querySelector("#email");
+            let password = document.querySelector("#password");
+            let age = document.querySelector("#age");
+            let tel = document.querySelector("#tel");
+            let profile = document.querySelector("#profile");
+            let date1 = document.querySelector("#date");
+            let d1 = document.querySelector(".d1");
+            if (name.value == "") {
+                name.placeholder = "enter the name";
+                e.preventDefault();
+            }
+            if (email.value == "") {
+                email.placeholder = "enter the email";
+                e.preventDefault();
+            } else {
+                let k = email.value.includes("gmail") || email.value.includes("hotmail");
+                if (!k) {
+                    document.querySelector(".email").innerHTML = "enter the valid email"
+                    e.preventDefault();
+                } else {
+                    document.querySelector(".email").innerHTML = ""
+                }
+            }
+            if (password.value == "") {
+                password.placeholder = "enter the password";
+                e.preventDefault();
+            } else {
+                let k = /[A-Z]/g;
+                let c = k.test(password.value);
+                if (c) {
+                    document.querySelector(".pass").innerHTML = "all the letters in small letter case";
+                    e.preventDefault();
+                } else {
+                    document.querySelector(".pass").innerHTML = "";
+                }
+            }
+            if (tel.value == "") {
+                tel.placeholder = "enter the mobile number"
+                e.preventDefault();
+            }
+            if (age.value == 0) {
+                age.placeholder = "enter the age";
+                e.preventDefault();
+            } else {
+                if (age.value <= 18) {
+                    document.querySelector(".age-validate").innerHTML = "only 18+ people can register";
+                    e.preventDefault();
+                } else {
+                    document.querySelector(".age-validate").innerHTML = "";
+                }
+            }
+            if (date1.value == "") {
+                d1.textContent = "enter the birthdate"
+                e.preventDefault();
+            }
+            else {
+                let y = new Date(date1.value);
+                let h = y.getTime();
+                let age = (new Date().getTime() - h) / 1000 / 60 / 60 / 24 / 365;
+                if (age <= 18) {
+                    d1.textContent = "you are below the 18 year"
+                    e.preventDefault();
+                }
+                else {
+                    d1.textContent = "";
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
