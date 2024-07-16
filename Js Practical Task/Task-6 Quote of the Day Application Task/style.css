@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(140deg, #ed939e, #f4d0bf);
+    height: 100vh;
+}
+
+.main {
+    height: 200px;
+    position: relative;
+    padding: 20px;
+    max-width: 2000px;
+    background-color: #ece3da;
+    border-radius: 25px;
+}
+
+.btn {
+    position: absolute;
+    bottom: 10%;
+    left: 42%;
+    padding: 10px 20px;
+
+}
