@@ -27,7 +27,8 @@
             <div>
                 <h1 class="text-center text-success pb-2">Display and Search a List of Users</h1>
                 <div class="d-flex align-items-center pb-3">
-                    <input type="search" placeholder="Search here..." id="input" class="form-control">
+                    <input type="search" placeholder="Search here..." id="input" class="form-control"
+                        oninput="(()=>(this.value=='')?getData():'')()">
                     <button class="btn btn-secondary" onclick="searchData()">Search</button>
                 </div>
             </div>

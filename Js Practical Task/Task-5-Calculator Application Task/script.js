@@ -12,11 +12,13 @@ let getNumbers = () => {
         if (num2 == "") {
             document.querySelector(".num2Feedback").textContent = "Please enter the number"
         }
+        resultArea.style.opacity = 0;
     }
     else {
         document.querySelector(".num1Feedback").textContent = document.querySelector(".num2Feedback").textContent = ""
         num1 = Number(num1);
-        num2 = Number(num2)
+        num2 = Number(num2);
+        resultArea.style.opacity = 1;
     }
 }
 
@@ -40,6 +42,7 @@ for (let x of btn) {
             case "C":
                 document.querySelector("#num1").value = 0;
                 document.querySelector("#num2").value = 0;
+                document.querySelector(".num1Feedback").style.display = document.querySelector(".num2Feedback").style.display = "none"
                 result = 0;
                 break;
             default:
