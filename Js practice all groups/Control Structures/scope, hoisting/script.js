@@ -1,10 +1,10 @@
-// "use strict" // stop the hoisting throught use strict word
+// "use strict" // stop the hoisting through  use strict word
 let global = "global scope";
 
 let test = () => {
     console.log(global);
     let k = "company";
-    var d = "employes"
+    var d = "employee"
 }
 test();
 console.log(global);

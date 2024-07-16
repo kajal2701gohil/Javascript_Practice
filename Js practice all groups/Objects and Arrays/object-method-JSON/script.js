@@ -67,7 +67,7 @@ let n = 150;
 k = n.toString();
 // console.log(typeof k); = string
 
-// includes - retrun true false
+// includes - return true false
 k = str.includes(" ");
 // console.log(k); - true
 

@@ -70,8 +70,8 @@ for (let x of btn1) {
 // document.querySelector(".parent").addEventListener("click", () => {
 //     console.log("parent is clicked...");
 // })
-// document.querySelector(".chlid").addEventListener("click", () => {
-//     console.log("chlid is clicked...");
+// document.querySelector(".child").addEventListener("click", () => {
+//     console.log("child is clicked...");
 // })
 // document.querySelector(".btn5").addEventListener("click", (e) => {
 //     console.log("btn5 is clicked...");
@@ -84,8 +84,8 @@ for (let x of btn1) {
 document.querySelector(".parent").addEventListener("click", () => {
     console.log("parent is clicked...");
 })
-document.querySelector(".chlid").addEventListener("click", () => {
-    console.log("chlid is clicked...");
+document.querySelector(".child").addEventListener("click", () => {
+    console.log("child is clicked...");
 }, true)
 document.querySelector(".btn5").addEventListener("click", (e) => {
     console.log("btn5 is clicked...");
@@ -120,20 +120,20 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("dom loaded....");
 })
 window.addEventListener("keydown", () => {
-    console.log("kewydown..");
+    console.log("keydown..");
 })
 window.addEventListener("keyup", () => {
-    console.log("kewyup..");
+    console.log("keyup..");
 })
 window.addEventListener("keypress", () => {
-    console.log("kewpress..");
+    console.log("keypress..");
 })
 window.addEventListener("wheel", function (event) {
     if (event.deltaY < 0) {
-        console.log("pageup");
+        console.log("page-up");
     }
     else if (event.deltaY > 0) {
-        console.log("pagedown");
+        console.log("page-down");
     }
     // console.log("page is scrolling...",event.deltaY>0);
     // document.body.style.backgroundColor = 'grey'
@@ -154,7 +154,7 @@ inp.addEventListener("focus", () => {
     console.log("input is focus..");
 })
 inp.addEventListener("blur", () => {
-    console.log("input is bluring..");
+    console.log("input is blur..");
 })
 
 btn.style.color = "green"

@@ -15,7 +15,7 @@ let main = (a, b, callback) => {
 main(10, 25, test)
 
 
-// Asynchronous JavaScript - noe wait for any function who taking time like settimeout
+// Asynchronous JavaScript - not wait for any function who taking time like settimeout
 
 setTimeout(() => {
     // console.log(12);
@@ -89,7 +89,7 @@ promise();
 let k = "https://images.pexels.com/photos/8259263/pexels-photo-8259263.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
 
 // console.log(k);
-let chnageData = () => {
+let changeData = () => {
     console.log("object", k);
     document.getElementById("box").style.border = "2px solid red"
 
@@ -105,7 +105,7 @@ setTimeout(() => {
 }, 2000);
 console.log(36);
 
-// event loop =>all the loop=>call stack=>web api=>callback queue => all the work do throught event loop
+// event loop =>all the loop=>call stack=>web api=>callback queue => all the work done through event loop
 
 // set time out 0
 let num = 150;

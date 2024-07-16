@@ -18,7 +18,8 @@ let changeData = (a) => {
 
 var num = 150; // this is used in old version, and it is use full in hoisting
 let test = "company"; // let comes from ES6
-const str = "string"; //const variable is not changable
+const str = "string"; //const variable is not changeable
+
 let list1;
 list1 = list.firstElementChild;
 list1.innerHTML = num;
@@ -87,7 +88,7 @@ n2.innerHTML = `number2=${y}`;
 
 let result;
 
-//1) arithemetic operator
+//1) arithmetic operator
 result = x + y;
 result = x - y;
 result = x * y;
@@ -99,8 +100,8 @@ x++ & x--; // increase or decrease the value but assign in new line
 
 console.log(x);
 
-// 2) comparison operators - retrun the true false
-// == check only the value and === check the valur and data type both
+// 2) comparison operators - return the true false
+// == check only the value and === check the value and data type both
 console.log(10 == 10); //true
 console.log(9 > 10); // false
 console.log(12 < 5); //false
@@ -144,6 +145,6 @@ console.log(w*=5);//35
 console.log(w/=7);//5
 console.log(w%=2);//1
 
-// 6) special operator (ternory opeator) - used for single line condition
+// 6) special operator (ternary operator) - used for single line condition
 
 (15>12)?console.log('true'):console.log("false");

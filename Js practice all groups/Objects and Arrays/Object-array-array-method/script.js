@@ -27,13 +27,13 @@ delete arr[3]; // it create empty
 
 // array methods
 
-// 1)map - it doing some specific peration on all array element and return update array
+// 1)map - it doing some specific operation on all array element and return update array
 let k = arr.map(x => x * 2);
 // console.log(k); -  [24, NaN, NaN, empty, NaN, 0, 0, NaN]
 k = arr.map(x => typeof x == "number");
 // console.log(k); -[true, false, false, empty, false, false, true, false]
 
-// 2)fillter-it check the specific condition on all array element and return the true array
+// 2)filter-it check the specific condition on all array element and return the true array
 k = arr.filter(x => typeof x == "string");
 // console.log(k);  -['surat', 'point', '#']
 // console.log(arr);
@@ -73,12 +73,12 @@ k = arr3.reduce((x, y) => x + y.roll, 0);
 k = arr2.reduceRight((x, y) => x - y, 20);
 // console.log(k); - 5
 
-// 4) fill =- used to fill array elemnt by one element - it change the main array
+// 4) fill =- used to fill array element by one element - it change the main array
 // console.log(arr);
 // arr.fill("@");
 // console.log(arr); - ['@', '@', '@', '@', '@', '@', '@', '@']
 
-// 5) find - find check the given condition array all element where satisfy the retrun the array element
+// 5) find - find check the given condition array all element where satisfy the return the array element
 console.log(arr3);
 k = arr3.find(x => x.roll == 60);
 // console.log(k); - {name: 'xyz', roll: 60}
@@ -110,7 +110,7 @@ arr4.unshift("gujarat")
 // console.log(arr4); - ['gujarat', 2, 5, 9, 4, 5, 'surat']
 
 
-// 12) findindex - find check the given condition array all element where satisfy the retrun the index of  element
+// 12) findindex - find check the given condition array all element where satisfy the return the index of  element
 
 k = arr3.findIndex(x => x.roll == 60);
 // console.log(k);  - 5
@@ -152,7 +152,7 @@ k = arr3.sort((x, y) => y.roll - x.roll);
 k = arr3.some((x) => x.roll == 60);
 // console.log(k); - true
 
-// 20)every - retrun true if all the element satisfy the condition
+// 20)every - return true if all the element satisfy the condition
 k=arr5.every(x=>typeof x =="number")
 // console.log(k); - true
 
@@ -161,7 +161,7 @@ let str="business";
 k = Array.from(str);
 // console.log(k); - ['b', 'u', 's', 'i', 'n', 'e', 's', 's']
 
-// 22) array.of - create the arrray of entered variable
+// 22) array.of - create the array of entered variable
 k = Array.of(arr,arr2,arr3);
 // console.log(k.flat()); - ['#', 0, false, undefined, '%', 'gujarat', 89, 45, 12, 1, 2, 3, 4, 5, {…}, {…}, {…}, {…}, {…}, {…}]
 
