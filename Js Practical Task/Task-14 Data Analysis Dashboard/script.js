@@ -67,15 +67,16 @@ let studentData = [
 
 let start = "", end = "";
 let filterData = () => {
-    chart.destroy();
-    start = document.querySelector("#startYear").value
-    end = document.querySelector("#endYear").value
+    start = document.querySelector("#startYear").value;
+    end = document.querySelector("#endYear").value;
+    if (start == "" && end == "") {
+        alert("Please enter the years")
+    }
     if (start > end) {
         alert("Please enter the valid year range")
-
     }
     else {
-        console.log(start, end);
+        chart.destroy();
         let startIndex = studentData.findIndex(x => x.year == start);
         let endIndex = studentData.findIndex(x => x.year == end);
         studentData = studentData.slice(startIndex, endIndex + 1);
@@ -87,8 +88,6 @@ let filterData = () => {
 
 
 let printDetails = (studentData) => {
-    console.log(studentData);
-
     let sum = 0;
     let max = studentData[0]["students"];
     let min = studentData[0]["students"];
