@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body class="box">
+
+    <main class="border border-4 border-white shadow-lg w-50 position-absolute top-50 start-50 translate-middle p-4">
+        <h1>Quiz Application</h1>
+        <p id="qty">Please wait...</p>
+        <div class="pb-2 optionList">
+
+        </div>
+
+        <div class="warning  text-danger pb-3"></div>
+        <button class="btn btn-primary " onclick="nextQty(this)">Next</button>
+        <div class="text-end">
+            <p>Current score: <span id="num">0</span></p>
+        </div>
+    </main>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>

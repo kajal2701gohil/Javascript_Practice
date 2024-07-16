@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+
+<body>
+
+    <section id="main" class="bg-white ">
+        <div class="imgDiv">
+            <img src="https://images.pexels.com/photos/23698640/pexels-photo-23698640/free-photo-of-a-wind-turbine-in-the-middle-of-a-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="" class="img-fluid">
+        </div>
+        <div class="formDiv bg">
+            <form action="" id="form" class="form py-3 px-5 m-auto">
+                <legend class="fw-bold pb-2">Registration Form</legend>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingname" placeholder="xyz">
+                    <label for="floatingname">Name</label>
+                    <div class="name feedback d-block">
+
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingemail" placeholder="name@example.com">
+                    <label for="floatingemail">Email address</label>
+                    <div class="email feedback d-block">
+
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="name@example.com">
+
+                    <label for="floatingPassword">Password</label>
+                    <div class="password feedback d-block">
+
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingConfirmPassword"
+                        placeholder="name@example.com">
+                    <label for="floatingConfirmPassword">Confirm Password</label>
+                    <div class="confirmPassword feedback d-block">
+
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I accept the <a href="#">Term and Condition.</a>
+                    </label>
+                    <div class="correctArrow feedback d-block">
+
+                    </div>
+                </div>
+                <button type="button" value="Submit" class="btn btn-success mt-3" disabled>Submit
+                    </button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
