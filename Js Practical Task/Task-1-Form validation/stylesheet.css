@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: nowrap;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.imgDiv, .formDiv {
+    width: 50%;
+}
+
+.btn-success {
+    background-color: #243318cb;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #243318cb;
+    border-color: #243318cb;
+}
+
+body {
+    background: linear-gradient(#f7e3f1, #e7e4f6);
+    height: 100vh;
+}
+.feedback
+{
+    color: red;
+}
