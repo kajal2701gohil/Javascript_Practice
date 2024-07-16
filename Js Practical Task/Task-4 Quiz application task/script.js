@@ -8,18 +8,19 @@ let score = 0;
 let getData = async () => {
     let list = await fetch("https://opentdb.com/api.php?amount=10");
     if (!list.ok) {
-        document.querySelector("main").textContent = "Something went wrong!! Unable to fecth the data"
+        document.querySelector("main").textContent = "Something went wrong!! Unable to fetch the data"
         document.querySelector("main").style.color = "red";
     }
-    let k = await list.json();
-    data = k.results;
+    let res = await list.json();
+    data = res.results;
     test(0);
 }
 getData();
 
 let test = (count) => {
     qty.textContent = `${count + 1}. ${data[count].question}`;
-    let index = Math.floor(Math.random() * data[count]["incorrect_answers"].length)
+    let index = Math.floor(Math.random() * (data[count]["incorrect_answers"].length))
+    console.log(index);
     let option = data[count]["incorrect_answers"];
     option.splice(index, 0, data[count]["correct_answer"])
     let str = "";
@@ -37,12 +38,12 @@ let test = (count) => {
 }
 
 let nextQty = (e) => {
-    let k = document.querySelector("input[name = options]:checked")?.value;
+    let checkOption = document.querySelector("input[name = options]:checked")?.value;
     let currantCorrect = data[count]["correct_answer"];
-    if (k) {
+    if (checkOption) {
         document.querySelector(".warning").textContent = "";
         count += 1;
-        if (k == currantCorrect) {
+        if (checkOption == currantCorrect) {
             score += 1;
         }
         if (count > data.length - 1) {
