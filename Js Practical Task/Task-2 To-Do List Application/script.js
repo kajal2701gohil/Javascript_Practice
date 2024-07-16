@@ -5,15 +5,15 @@ let liAll = document.querySelectorAll("li");
 let list = [];
 let checkTask = [];
 let saveData = () => {
-    let k = task.value;
+    let newTask = task.value;
     if (editText) {
         let index = list.findIndex(x => x == editText);
-        list.splice(index, 1, k);
+        list.splice(index, 1, newTask);
         editText = "";
     }
     else {
 
-        list.push(k)
+        list.push(newTask)
     }
     task.value = "";
     printTask();
@@ -23,16 +23,13 @@ let printTask = () => {
     let str = "";
     list?.map((x, i) => {
         str += `
-    <li class="position-relative  ${(checkTask.includes(x)) ? "text-decoration-line-through" : ""}"><input type="checkbox" onchange="doneTask(this, ${i})" name=${i} class="check" ${(checkTask.includes(x)) ? "checked" : ""}>${x}
+<li class="position-relative  ${(checkTask.includes(x)) ? " text-decoration-line-through" : ""}">
+    <input type="checkbox" onchange="doneTask(this, ${i})" name=${i} class="check" ${(checkTask.includes(x)) ? "checked" : ""}>${x}
     <div class="position-absolute box">
-    <button class="btn1"
-    type="button" onclick="editData(${i})"> <i
-    class="fa-solid fa-pen-to-square"></i></button>
-    <button class="btn3" type="button" onclick="delTask(${i})">
-    <i 
-    class="fa-solid fa-trash"></i></button>
+        <button class="btn1" type="button" onclick="editTask(${i})"> <i class="fa-solid fa-pen-to-square"></i></button>
+        <button class="btn3" type="button" onclick="delTask(${i})"> <i class="fa-solid fa-trash"></i></button>
     </div>
-    </li>`
+</li>`
     })
     data.innerHTML = str;
 }
@@ -49,6 +46,6 @@ let doneTask = (a, k) => {
         checkTask = checkTask.filter(x => x != list[k]);
     }
 }
-let editData = (c) => {
+let editTask = (c) => {
     editText = task.value = list[c];
 }

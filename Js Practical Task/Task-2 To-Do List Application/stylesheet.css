@@ -49,14 +49,12 @@ ul {
 
 #main {
     width: 25%;
-
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 5px 5px 40px gray;
-
     background-color: #ffff;
 }
 
