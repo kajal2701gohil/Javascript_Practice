@@ -38,14 +38,13 @@ let currant = 0;
 let printPlayList = () => {
     let str = "";
     playList?.map((x, i) => {
-        str += `<li>${x.name}<button onclick = delSong(${i})>del</button></li>`
+        str += `<li>${x.name}<button class="btn btn-danger" onclick = delSong(${i})>Delete</button></li>`
     })
     data.innerHTML = str;
 }
 
 printPlayList();
 let playSong = () => {
-
     audio.src = playList[currant].path;
     document.querySelector("#playing").textContent = playList[currant].name
     audio.play();
@@ -54,7 +53,6 @@ let playSong = () => {
 playSong();
 
 play1.addEventListener("click", () => {
-    console.log(audio.paused);
     if (audio.paused) {
         audio.play();
         play1.classList.replace("fa-play", "fa-pause")
@@ -85,10 +83,8 @@ let addSong = () => {
     let obj = {};
     let name = prompt("Please enter the name of the song");
     let song = document.querySelector("#newSong").value;
-    console.log(name, song);
     obj.name = name;
     obj.path = song;
-    playList = [...playList, obj]
     document.querySelector("#newSong").value = ""
     printPlayList();
 }
@@ -99,10 +95,6 @@ let delSong = (a) => {
 }
 
 let shuffle = () => {
-    playList = playList?.sort(x => {
-
-        console.log(x, Math.random(), Math.random() * 10 - 0.8);
-        return Math.random() - 0.5
-    })
+    playList = playList?.sort((x, y) => Math.random() - 0.5)
     printPlayList();
 }
