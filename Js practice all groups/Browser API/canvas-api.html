@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas1" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas2" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas3" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas4" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas5" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas6" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas7" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas8" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas9" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas10" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <canvas id="myCanvas11" width="300" height="300" style="border:2px solid #8a6c48;"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        // ctx.fillStyle = "#FF0045";
+        // ctx.fillRect(50, 0, 200, 50);
+
+
+
+        ctx.moveTo(0, 150);
+        ctx.lineTo(300, 150);
+        ctx.stroke();
+        ctx.lineWidth = 5;
+        ctx.font = "30px calibri";
+        ctx.strokeText("hello", 20, 20)
+
+
+        ctx.moveTo(150, 0);
+        ctx.lineTo(150, 300);
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(70, 70, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(230, 70, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(70, 230, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(230, 230, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+
+        let canvas1 = document.querySelector("#myCanvas1");
+        let ctx1 = canvas1.getContext("2d");
+        ctx1.fillStyle = "grey";
+        ctx1.fillRect(0, 0, 300, 300);
+
+        let canvas2 = document.querySelector("#myCanvas2");
+        let ctx2 = canvas2.getContext("2d");
+        var grd = ctx2.createRadialGradient(175, 50, 5, 190, 60, 200);
+        grd.addColorStop(0.1, "#877fa8");
+        grd.addColorStop(0.3, "#bd86a6");
+        grd.addColorStop(0.5, "#d47e97");
+        grd.addColorStop(0.7, "#f59193");
+        grd.addColorStop(0.8, "#f9ae91");
+        grd.addColorStop(1, "#fcf7bf");
+
+        ctx2.fillStyle = grd;
+        ctx2.fillRect(50, 50, 200, 200);
+
+
+        let canvas3 = document.querySelector("#myCanvas3");
+        let ctx3 = canvas3.getContext("2d");
+        ctx3.moveTo(10, 10);
+        ctx3.lineTo(150, 10);
+        ctx3.lineTo(250, 150);
+        ctx3.lineTo(10, 150);
+        ctx3.lineTo(10, 10)
+        ctx3.strokeStyle = "red"
+        ctx3.lineWidth = 4;
+        ctx3.fillStyle = "orange";
+        ctx3.fill();
+        ctx3.stroke();
+
+
+        let canvas4 = document.querySelector("#myCanvas4");
+        let ctx4 = canvas4.getContext("2d");
+
+        ctx4.moveTo(130, 20);
+        ctx4.lineTo(10, 200);
+        ctx4.lineTo(260, 200);
+        ctx4.lineTo(130, 20);
+
+        ctx4.stroke();
+
+
+        let canvas5 = document.querySelector("#myCanvas5");
+        let ctx5 = canvas5.getContext("2d");
+        ctx5.strokeStyle = "red";
+        ctx5.lineWidth = 5;
+        ctx5.strokeRect(20, 20, 260, 260);
+        ctx5.strokeStyle = "green";
+        ctx5.lineWidth = 3;
+        ctx5.strokeRect(40, 40, 60, 60);
+        ctx5.strokeStyle = "blue";
+        ctx5.lineWidth = 10;
+        ctx5.strokeRect(70, 70, 80, 80);
+        ctx5.beginPath();
+        ctx5.arc(160, 160, 50, 0, 2 * Math.PI);
+        ctx5.strokeStyle = "brown"
+        ctx5.stroke();
+
+        let canvas6 = document.querySelector("#myCanvas6");
+        let ctx6 = canvas6.getContext("2d");
+        ctx6.fillStyle = "pink"
+        ctx6.fillRect(20, 20, 260, 260);
+        ctx6.clearRect(160, 160, 50, 120);
+        ctx6.beginPath();
+        ctx6.fillStyle = "green"
+        ctx6.arc(90, 80, 60, 0, Math.PI)
+        ctx6.fill();
+        ctx6.stroke();
+        ctx6.beginPath();
+        ctx6.moveTo(10, 20);
+        ctx6.quadraticCurveTo(50, 180, 250, 230);
+        ctx6.stroke();
+        ctx6.beginPath();
+        ctx6.moveTo(10, 20);
+        ctx6.bezierCurveTo(280, 280, 220, 150, 250, 350);
+        ctx6.stroke();
+
+
+
+
+        let canvas7 = document.querySelector("#myCanvas7");
+        let ctx7 = canvas7.getContext("2d");
+        ctx7.moveTo(150, 0);
+        ctx7.lineTo(150, 300)
+        ctx7.stroke();
+        ctx7.font = "40px calibri"
+        ctx7.strokeText("hello", 20, 60);
+        ctx7.textBaseline = "top";
+        ctx7.fillText("top", 150, 5);
+        ctx7.textBaseline = "hanging";
+        ctx7.fillText("hanging", 140, 35);
+        ctx7.textBaseline = "middle";
+        ctx7.fillText("middle", 120, 125);
+        ctx7.textBaseline = "middle";
+        ctx7.fillText("middle", 110, 155);
+        ctx7.textBaseline = "middle";
+        ctx7.fillText("middle", 90, 180);
+        ctx7.textBaseline = "middle";
+        ctx7.fillText("middle", 130, 95);                
+
+
+
+
+
+
+        let canvas8 = document.querySelector("#myCanvas8");
+        let ctx8 = canvas8.getContext("2d");
+        ctx8.shadowColor = "blue";
+        ctx8.shadowOffsetX = 10;
+        ctx8.shadowOffsetY = 10;
+        ctx8.fillStyle = "skyblue";
+        ctx8.fillRect(20, 20, 80, 80);
+
+        ctx8.strokeStyle = "purple";
+        ctx8.lineWidth = 5;
+        ctx8.strokeRect(120, 120, 90, 90);
+
+
+        let canvas9 = document.querySelector("#myCanvas9");
+        let ctx9 = canvas9.getContext("2d");
+        ctx9.fillStyle = "#f7f7f7";
+        ctx9.fillRect(0, 0, 300, 300);
+        ctx9.beginPath();
+        ctx9.strokeStyle = "#55a3d1";
+        ctx9.lineWidth = 8;
+        ctx9.arc(150, 150, 120, 0, 0.5 * Math.PI);
+        ctx9.stroke();
+        ctx9.beginPath();
+        ctx9.moveTo(20, 120);
+        ctx9.quadraticCurveTo(20, 300, 500, 100);
+        ctx9.stroke();
+        ctx9.fillStyle = "#55a3d1";
+        ctx9.fillRect(80, 80, 50, 50);
+
+        ctx9.strokeStyle = "#55a3d1";
+        ctx9.moveTo(200, 20);
+        ctx9.lineTo(180, 100)
+        ctx9.stroke();
+        ctx9.moveTo(200, 20);
+        ctx9.lineTo(300, 0)
+        ctx9.stroke();
+
+
+        let canvas10 = document.querySelector("#myCanvas10");
+        let ctx10 = canvas10.getContext("2d");
+        ctx10.fillStyle = "green";
+        ctx10.fillRect(10, 10, 200, 100)
+        ctx10.transform(1, 0.5, -0.5, 1, 30, 10);
+        ctx10.fillStyle = "pink";
+        ctx10.fillRect(10, 10, 200, 100);
+        ctx10.transform(1, 0.5, -0.5, 1.2, 30, 10);
+        ctx10.fillStyle = "lightblue";
+        ctx10.fillRect(10, 10, 200, 200);
+
+        let canvas11 = document.querySelector("#myCanvas11");
+        let ctx11 = canvas11.getContext("2d");
+        ctx11.fillStyle = "purple";
+        ctx11.shadowColor = "pink";
+        ctx11.shadowOffsetX = 10;
+        ctx11.shadowOffsetY = 10;
+        ctx11.arc(120, 120, 100, 0, 2 * Math.PI);
+        ctx11.fill();
+    </script>
+</body>
+
+</html>;
