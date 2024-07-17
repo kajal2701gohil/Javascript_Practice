@@ -69,13 +69,27 @@ let start = "", end = "";
 let filterData = () => {
     start = document.querySelector("#startYear").value;
     end = document.querySelector("#endYear").value;
-    if (start == "" && end == "") {
-        alert("Please enter the years")
+    let checkStartYear = studentData.some(x => x.year == start);
+    let checkEndYear = studentData.some(x => x.year == end);
+    if (start == "") {
+        alert("Please enter the first year")
     }
-    if (start > end) {
+    else if (end == "") {
+        alert("Please enter the second year")
+    }
+    else if (!checkStartYear) {
+        alert("Enter first year data is not available")
+    }
+
+    else if (!checkEndYear) {
+        alert("Enter second year data is not available")
+    }
+
+    else if (start > end) {
         alert("Please enter the valid year range")
     }
     else {
+
         chart.destroy();
         let startIndex = studentData.findIndex(x => x.year == start);
         let endIndex = studentData.findIndex(x => x.year == end);

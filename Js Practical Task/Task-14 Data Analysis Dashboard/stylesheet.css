@@ -5,9 +5,10 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body{
+body {
     background-color: aliceblue;
 }
+
 .heading {
     background-image: url("https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     height: 300px;
@@ -37,8 +38,12 @@ body{
     box-shadow: 10px 10px 30px gray;
 }
 
+.details {
+    width: 15%;
+}
+
 .details>div {
-   border: none;
+    border: none;
     height: 130px;
     margin-bottom: 15px;
     width: 80%;
