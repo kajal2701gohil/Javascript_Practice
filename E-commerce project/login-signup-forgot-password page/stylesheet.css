@@ -1,0 +1,193 @@
+body {
+    background-color: #F0F0F0;
+}
+
+.center {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-color: var(---white-color);
+    height: 700px;
+}
+
+.center>div {
+    width: 50%;
+    padding: 100px 0;
+}
+
+.box {
+    background-color: var(---yellow-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    color: var(---white-color);
+    font-family: var(---Merriweather-font);
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.box h1 {
+    padding: 10px 0px;
+    font-size: 40px;
+}
+
+.box p {
+    padding-bottom: 50px;
+}
+
+.form>div {
+    width: 80%;
+    font-family: var(---raleway);
+    padding: 50px 100px;
+    margin: 0 auto;
+    border: 2px solid #808080ce;
+}
+
+.form h1 {
+    font-family: var(---Merriweather-font);
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 25px 0px;
+}
+
+.form label {
+    font-size: 16px;
+    display: block;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    outline: 0;
+    border-width: 0 0 2px;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.form #forgot_password {
+    text-align: end;
+    font-size: 16px;
+}
+.feedback{
+    padding-bottom: 10px;
+}
+
+.form #login,
+.submit,
+#forgotBtn,
+#changePassword {
+    background-color: var(---yellow-color);
+    color: var(---white-color);
+    border: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.form #goSignup,
+#backLogin {
+    color: #e64e4e;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#signPage,
+#forgotPasswordPage {
+    display: none;
+}
+
+@media only screen and (max-width: 1750px) {
+    .box #img1 {
+        width: 180px;
+    }
+
+    .box #img2 {
+        width: 500px;
+        margin-top: 15px;
+    }
+
+    .form>div {
+        width: 70%;
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .box #img1 {
+        width: 150px;
+    }
+
+    .box #img2 {
+        width: 400px;
+    }
+
+    .form h1 {
+        font-size: 20px;
+    }
+
+    .form label,
+    .form #forgot_password,
+    .form #login,
+    .submit,
+    #forgotBtn,
+    #changePassword,
+    .form #goSignup,
+    #backLogin {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .box #img1 {
+        width: 130px;
+    }
+
+    .box #img2 {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .show {
+
+        display: none;
+    }
+
+    .center>div {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .form>div {
+        box-shadow: 10px 10px 15px;
+        border: 2px solid var(---white-color);
+        background-color: var(---white-color);
+    }
+
+    .form {
+        background-color: #F0F0F0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .center>div {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .form>div {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

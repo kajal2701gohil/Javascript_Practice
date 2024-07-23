@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(---Merriweather-font);
+}
+
+@font-face {
+    font-family: FirstFont;
+    src: url("font/merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url("font/raleway/Raleway-Regular.ttf");
+}
+
+:root {
+    ---Merriweather-font: FirstFont;
+    ---raleway: secondFont;
+    ---white-color: #fff;
+    ---yellow-color: #ffbb21;
+    ---transition: all 0.7s ease-in-out;
+}
+
+.btn {
+    padding: 15px 20px;
+    background-color: #000;
+    color: var(---white-color);
+    font-size: 14px;
+    border: none;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-family: var(---raleway);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #DACCAC;
+    color: #000;
+    transition: var(---transition);
+}
+
+.middle {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+li {
+    list-style-type: none;
+}

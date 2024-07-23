@@ -1,0 +1,76 @@
+main {
+    padding: 120px 0;
+}
+
+#eachProduct {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+#showCart {
+    display: block;
+}
+
+#eachProduct h3 {
+    font-family: var(---Merriweather-font);
+    font-size: 20px;
+}
+
+#eachProduct p {
+    font-family: var(---raleway);
+    padding: 5px 0;
+}
+
+#inp {
+    width: 50px;
+    border-radius: 5px;
+    font-family: var(---raleway);
+    font-size: 18px;
+    padding: 5px;
+}
+
+hr {
+    margin-bottom: 15px;
+}
+.totalDiv{
+    text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+    #eachProduct h3 {
+        font-size: 14px;
+    }
+
+    #eachProduct p {
+        font-size: 10px;
+    }
+
+    #eachProduct img {
+        width: 20%;
+    }
+
+    #eachProduct .btn {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    #inp {
+        width: 30px;
+        font-size: 15px;
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #eachProduct {
+        display: block;
+    }
+
+    #eachProduct img {
+        width: 50%;
+    }
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../customstyle.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../Header-footer/HeaderStyle.css" />
+</head>
+
+<body>
+  <header id="header"></header>
+  <main>
+    <div class="middle productDiv">
+      <aside>
+        <div>
+          <h3>Filter By</h3>
+          <ul>
+            <li>
+              <button class="btn" onclick="getLowPrice()">
+                Lower to high price
+              </button>
+            </li>
+            <li>
+              <button class="btn" onclick="getHighPrice()">
+                Higher to lower price
+              </button>
+            </li>
+            <li>
+              <button class="btn">Design</button>
+              <div>
+                <p onclick="getClassic()">Classic</p>
+                <p onclick="getFloral()">Floral</p>
+              </div>
+            </li>
+            <li>
+              <button class="btn" onclick="getSize()">Size</button>
+              <div id="sizeData"></div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <section>
+        <div class="products"></div>
+      </section>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script src="../Header-footer/HeaderScript.js"></script>
+</body>
+
+</html>

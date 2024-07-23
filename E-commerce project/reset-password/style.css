@@ -1,0 +1,67 @@
+main {
+    height: 600px;
+    position: relative;
+}
+
+.form3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid gray;
+    padding: 25px;
+    font-family: var(---Merriweather-font);
+    width: 20%;
+}
+
+.form3 h1 {
+    padding-bottom: 10px;
+}
+
+.form3 label {
+    font-size: 16px;
+    display: block;
+}
+
+.form3 input {
+    width: 100%;
+    padding: 8px;
+    outline: 0;
+    border-width: 0 0 2px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+#feedBackDiv {
+    color: red;
+}
+
+@media only screen and (max-width: 1750px) {
+    .form3 {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .form3 {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .form3 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .form3 {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .form3 {
+        width: 80%;
+    }
+}

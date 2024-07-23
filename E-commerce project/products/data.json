@@ -1,0 +1,390 @@
+{
+    "Bedding": [
+        {
+            "name": "Robots Rule",
+            "price": 2599,
+            "size": "Single dohar",
+            "img": "./../../Images/bedding/1.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Floral Garden",
+            "price": 2999,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/2.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Newyork",
+            "price": 2899,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/3.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Nouvelle",
+            "price": 3259,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/4.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Alliume",
+            "price": 3999,
+            "size": "Single dohar",
+            "img": "./../../Images/bedding/5.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Line Art",
+            "price": 2599,
+            "size": "Single dohar",
+            "img": "./../../Images/bedding/6.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Alysa",
+            "price": 3599,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/7.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Starry-Night",
+            "price": 2899,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/8.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Elena",
+            "price": 6899,
+            "size": "Single dohar",
+            "img": "./../../Images/bedding/9.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Stellar",
+            "price": 3599,
+            "size": "Single dohar",
+            "img": "./../../Images/bedding/10.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Zoe",
+            "price": 4599,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/11.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Evelyn",
+            "price": 2199,
+            "size": "DOUBLE BED SHEET SET",
+            "img": "./../../Images/bedding/12.jpg",
+            "design": "Floral"
+        }
+    ],
+    "Bath": [
+        {
+            "name": "Towel-650gsm",
+            "price": 1500,
+            "size": "Bath Towel",
+            "img": "./../../Images/bath/1.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Towel-500gsm",
+            "price": 1000,
+            "size": "Hand Towel",
+            "img": "./../../Images/bath/2.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Towel-450gsm",
+            "price": 950,
+            "size": "Face Towel",
+            "img": "./../../Images/bath/3.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-450gsm",
+            "price": 580,
+            "size": "Face Towel",
+            "img": "./../../Images/bath/4.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-500gsm",
+            "price": 750,
+            "size": "Bath Towel",
+            "img": "./../../Images/bath/5.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Towel-650gsm",
+            "price": 1266,
+            "size": "Hand Towel",
+            "img": "./../../Images/bath/6.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-550gsm",
+            "price": 1399,
+            "size": "Bath Towel",
+            "img": "./../../Images/bath/7.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-650gsm",
+            "price": 1255,
+            "size": "Hand Towel",
+            "img": "./../../Images/bath/8.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-450gsm",
+            "price": 1099,
+            "size": "Bath Mat",
+            "img": "./../../Images/bath/9.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Towel-650gsm",
+            "price": 955,
+            "size": "Bath Towel",
+            "img": "./../../Images/bath/10.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Prism-Limon",
+            "price": 599,
+            "size": "Bath Mat",
+            "img": "./../../Images/bath/11.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Prism-Miel",
+            "price": 499,
+            "size": "Hand Towel",
+            "img": "./../../Images/bath/12.jpg",
+            "design": "Floral"
+        }
+    ],
+    "Cushion": [
+        {
+            "name": "Laconic",
+            "price": 1400,
+            "size": "Set of 5",
+            "img": "./../../Images/Cushion/1.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Strobe",
+            "price": 1699,
+            "size": "Set of 6",
+            "img": "./../../Images/Cushion/2.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Ciel",
+            "price": 1455,
+            "size": "Set of 6",
+            "img": "./../../Images/Cushion/3.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Dolent",
+            "price": 1590,
+            "size": "Set of 4",
+            "img": "./../../Images/Cushion/4.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Aita",
+            "price": 1322,
+            "size": "Set of 5",
+            "img": "./../../Images/Cushion/5.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Moira",
+            "price": 1478,
+            "size": "Set of 6",
+            "img": "./../../Images/Cushion/6.jpg",
+            "design": "Floral"
+        }
+    ],
+    "Curtains": [
+        {
+            "name": "Verena",
+            "price": 1799,
+            "size": "Door",
+            "img": "./../../Images/Curtains/1.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Cecelia",
+            "price": 1955,
+            "size": "Door",
+            "img": "./../../Images/Curtains/2.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Brescia",
+            "price": 1369,
+            "size": "Window",
+            "img": "./../../Images/Curtains/3.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Damaris",
+            "price": 1529,
+            "size": "Window",
+            "img": "./../../Images/Curtains/4.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Caligo",
+            "price": 1399,
+            "size": "Door",
+            "img": "./../../Images/Curtains/5.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Niello",
+            "price": 1199,
+            "size": "Door",
+            "img": "./../../Images/Curtains/6.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Kalopsia",
+            "price": 1299,
+            "size": "Door",
+            "img": "./../../Images/Curtains/7.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Santo",
+            "price": 1599,
+            "size": "Window",
+            "img": "./../../Images/Curtains/8.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Lets-Sall",
+            "price": 1355,
+            "size": "Window",
+            "img": "./../../Images/Curtains/9.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Aviso",
+            "price": 1329,
+            "size": "Door",
+            "img": "./../../Images/Curtains/10.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Asolo",
+            "price": 1599,
+            "size": "Door",
+            "img": "./../../Images/Curtains/11.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Burford",
+            "price": 1099,
+            "size": "Window",
+            "img": "./../../Images/Curtains/12.jpg",
+            "design": "Floral"
+        }
+    ],
+    "Rugs": [
+        {
+            "name": "Elbury",
+            "price": 1450,
+            "size": "XL",
+            "img": "./../../Images/Rugs/1.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Hana",
+            "price": 1955,
+            "size": "XL",
+            "img": "./../../Images/Rugs/2.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Amery",
+            "price": 1599,
+            "size": "X",
+            "img": "./../../Images/Rugs/3.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Symohony",
+            "price": 1529,
+            "size": "X",
+            "img": "./../../Images/Rugs/4.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Ruskin",
+            "price": 1399,
+            "size": "X",
+            "img": "./../../Images/Rugs/5.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Rhythm",
+            "price": 1299,
+            "size": "XL",
+            "img": "./../../Images/Rugs/6.jpg",
+            "design": "Floral"
+        }, 
+        {
+            "name": "Octave",
+            "price": 2450,
+            "size": "L",
+            "img": "./../../Images/Rugs/7.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Zeal",
+            "price": 1055,
+            "size": "S",
+            "img": "./../../Images/Rugs/8.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Drizzle",
+            "price": 1899,
+            "size": "X",
+            "img": "./../../Images/Rugs/9.jpg",
+            "design": "Floral"
+        },
+        {
+            "name": "Wisteria",
+            "price": 1500,
+            "size": "L",
+            "img": "./../../Images/Rugs/10.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Charm",
+            "price": 1355,
+            "size": "S",
+            "img": "./../../Images/Rugs/11.jpg",
+            "design": "Classic"
+        },
+        {
+            "name": "Mineral",
+            "price": 1699,
+            "size": "S",
+            "img": "./../../Images/Rugs/12.jpg",
+            "design": "Floral"
+        }
+    ]
+}

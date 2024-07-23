@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="../customstyle.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <main>
+    <div class="center">
+      <div class="show">
+        <div class="box">
+          <img src="../Images/img-1.png" alt="img-1" width="200" id="img1" />
+          <h1>Welcome back</h1>
+          <p>Decor Live beautiful</p>
+          <img src="../Images/ecommerce-stores-performance.png" alt="img-2" width="600" id="img2" />
+        </div>
+      </div>
+      <div class="form">
+        <div id="loginPage">
+          <form action="">
+            <h1>Login</h1>
+            <label for="email1">Email Id</label>
+            <input type="email" id="email1" />
+            <div class="email1 feedback"></div>
+            <label for="password1">Password</label>
+            <input type="password" id="password1" />
+            <div class="password1 feedback"></div>
+            <h2 id="forgot_password">
+              <a onclick="goForgotPasswordPage()">Forgot Password?</a>
+            </h2>
+            <button id="login" type="button" onclick="userLogin()">
+              Login
+            </button>
+            <p>
+              Not a account?
+              <a id="goSignup" onclick="goSignUp()">Signup</a>
+            </p>
+          </form>
+        </div>
+        <div id="signPage">
+          <form class="signupForm">
+            <h1>Signup</h1>
+            <div>
+              <label for="name">Username</label>
+              <input type="text" id="name" />
+              <div class="name feedback"></div>
+            </div>
+            <div>
+              <label for="email">Email address</label>
+              <input type="email" id="email" />
+              <div class="email feedback"></div>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" />
+              <div class="password feedback"></div>
+            </div>
+            <div>
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" />
+              <div class="confirmPassword feedback"></div>
+            </div>
+            <button type="button" value="Submit" disabled class="submit">
+              Submit
+            </button>
+            <div style="text-align: right">
+              <span>Back to</span>
+              <a id="backLogin" onclick="backToLogin()">Login</a>
+            </div>
+          </form>
+        </div>
+        <div id="forgotPasswordPage">
+          <form action="">
+            <h1>Forgot Password</h1>
+            <label for="email2">Please enter your email id</label>
+            <input type="email" id="email2" />
+            <div class="feedback"></div>
+            <button onclick="checkEmail()" id="forgotBtn" type="button">
+              Click
+            </button>
+            <p></p>
+            <div>
+              <input type="number" id="captchaInp" />
+              <div class="changePasswordDiv">
+                <div>
+                  <label for="password3">Set New Password</label>
+                  <input type="password" id="password3" />
+                </div>
+                <div>
+                  <label for="confirmPassword3">Confirm Password</label>
+                  <input type="password" id="confirmPassword3" />
+                  <div class="confirmPassword_feedback"></div>
+                  <button id="changePassword" type="button">
+                    Change Password
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

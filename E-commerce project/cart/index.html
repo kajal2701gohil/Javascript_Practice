@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../customstyle.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../Header-footer/HeaderStyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
+        </script>
+</head>
+
+<body>
+  <header id="header"></header>
+  <main>
+    <div class="middle">
+      <div>
+        <h1>Shopping Cart</h1>
+      </div>
+      <hr />
+      <div id="showCart"></div>
+      <div class="totalDiv">
+        <h3>Total Price: &#8377; <span id="totalPrice"></span></h3>
+        <h3>Total Items: <span id="totalItem"></span></h3>
+       <button class="btn order" onclick="placeOrder()">Proceed to Buy</button>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script src="../Header-footer/HeaderScript.js"></script>
+</body>
+
+</html>
